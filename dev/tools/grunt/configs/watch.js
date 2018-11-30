@@ -27,7 +27,7 @@ var watchOptions = {
     },
     'updater': {
         'options': {
-            livereload: true
+            livereload: false
         },
         'files': '<%= path.less.updater %>/**/*.less',
         'tasks': 'less:updater'
@@ -35,7 +35,7 @@ var watchOptions = {
     'reload': {
         'files': '<%= path.pub %>/**/*.css',
         'options': {
-            livereload: true
+            livereload: false
         }
     }
 };

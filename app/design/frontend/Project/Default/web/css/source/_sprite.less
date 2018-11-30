@@ -1,0 +1,517 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@accesebility-name: 'accesebility';
+@accesebility-x: 157px;
+@accesebility-y: 0px;
+@accesebility-offset-x: -157px;
+@accesebility-offset-y: 0px;
+@accesebility-width: 19px;
+@accesebility-height: 22px;
+@accesebility-total-width: 195px;
+@accesebility-total-height: 170px;
+@accesebility-image: '../images/sprite.png';
+@accesebility: 157px 0px -157px 0px 19px 22px 195px 170px '../images/sprite.png' 'accesebility';
+@account-name: 'account';
+@account-x: 82px;
+@account-y: 128px;
+@account-offset-x: -82px;
+@account-offset-y: -128px;
+@account-width: 21px;
+@account-height: 21px;
+@account-total-width: 195px;
+@account-total-height: 170px;
+@account-image: '../images/sprite.png';
+@account: 82px 128px -82px -128px 21px 21px 195px 170px '../images/sprite.png' 'account';
+@arrow-dark-name: 'arrow-dark';
+@arrow-dark-x: 157px;
+@arrow-dark-y: 123px;
+@arrow-dark-offset-x: -157px;
+@arrow-dark-offset-y: -123px;
+@arrow-dark-width: 12px;
+@arrow-dark-height: 21px;
+@arrow-dark-total-width: 195px;
+@arrow-dark-total-height: 170px;
+@arrow-dark-image: '../images/sprite.png';
+@arrow-dark: 157px 123px -157px -123px 12px 21px 195px 170px '../images/sprite.png' 'arrow-dark';
+@attention-name: 'attention';
+@attention-x: 157px;
+@attention-y: 79px;
+@attention-offset-x: -157px;
+@attention-offset-y: -79px;
+@attention-width: 17px;
+@attention-height: 17px;
+@attention-total-width: 195px;
+@attention-total-height: 170px;
+@attention-image: '../images/sprite.png';
+@attention: 157px 79px -157px -79px 17px 17px 195px 170px '../images/sprite.png' 'attention';
+@bag-large-name: 'bag-large';
+@bag-large-x: 125px;
+@bag-large-y: 0px;
+@bag-large-offset-x: -125px;
+@bag-large-offset-y: 0px;
+@bag-large-width: 27px;
+@bag-large-height: 28px;
+@bag-large-total-width: 195px;
+@bag-large-total-height: 170px;
+@bag-large-image: '../images/sprite.png';
+@bag-large: 125px 0px -125px 0px 27px 28px 195px 170px '../images/sprite.png' 'bag-large';
+@bag-light-name: 'bag-light';
+@bag-light-x: 61px;
+@bag-light-y: 103px;
+@bag-light-offset-x: -61px;
+@bag-light-offset-y: -103px;
+@bag-light-width: 20px;
+@bag-light-height: 20px;
+@bag-light-total-width: 195px;
+@bag-light-total-height: 170px;
+@bag-light-image: '../images/sprite.png';
+@bag-light: 61px 103px -61px -103px 20px 20px 195px 170px '../images/sprite.png' 'bag-light';
+@bag-name: 'bag';
+@bag-x: 95px;
+@bag-y: 39px;
+@bag-offset-x: -95px;
+@bag-offset-y: -39px;
+@bag-width: 25px;
+@bag-height: 25px;
+@bag-total-width: 195px;
+@bag-total-height: 170px;
+@bag-image: '../images/sprite.png';
+@bag: 95px 39px -95px -39px 25px 25px 195px 170px '../images/sprite.png' 'bag';
+@calendar-name: 'calendar';
+@calendar-x: 33px;
+@calendar-y: 103px;
+@calendar-offset-x: -33px;
+@calendar-offset-y: -103px;
+@calendar-width: 23px;
+@calendar-height: 20px;
+@calendar-total-width: 195px;
+@calendar-total-height: 170px;
+@calendar-image: '../images/sprite.png';
+@calendar: 33px 103px -33px -103px 23px 20px 195px 170px '../images/sprite.png' 'calendar';
+@car-large-name: 'car-large';
+@car-large-x: 0px;
+@car-large-y: 41px;
+@car-large-offset-x: 0px;
+@car-large-offset-y: -41px;
+@car-large-width: 37px;
+@car-large-height: 23px;
+@car-large-total-width: 195px;
+@car-large-total-height: 170px;
+@car-large-image: '../images/sprite.png';
+@car-large: 0px 41px 0px -41px 37px 23px 195px 170px '../images/sprite.png' 'car-large';
+@car-name: 'car';
+@car-x: 41px;
+@car-y: 155px;
+@car-offset-x: -41px;
+@car-offset-y: -155px;
+@car-width: 17px;
+@car-height: 13px;
+@car-total-width: 195px;
+@car-total-height: 170px;
+@car-image: '../images/sprite.png';
+@car: 41px 155px -41px -155px 17px 13px 195px 170px '../images/sprite.png' 'car';
+@card-attention-name: 'card-attention';
+@card-attention-x: 0px;
+@card-attention-y: 0px;
+@card-attention-offset-x: 0px;
+@card-attention-offset-y: 0px;
+@card-attention-width: 48px;
+@card-attention-height: 36px;
+@card-attention-total-width: 195px;
+@card-attention-total-height: 170px;
+@card-attention-image: '../images/sprite.png';
+@card-attention: 0px 0px 0px 0px 48px 36px 195px 170px '../images/sprite.png' 'card-attention';
+@card-checked-name: 'card-checked';
+@card-checked-x: 69px;
+@card-checked-y: 69px;
+@card-checked-offset-x: -69px;
+@card-checked-offset-y: -69px;
+@card-checked-width: 28px;
+@card-checked-height: 20px;
+@card-checked-total-width: 195px;
+@card-checked-total-height: 170px;
+@card-checked-image: '../images/sprite.png';
+@card-checked: 69px 69px -69px -69px 28px 20px 195px 170px '../images/sprite.png' 'card-checked';
+@card-large-name: 'card-large';
+@card-large-x: 53px;
+@card-large-y: 0px;
+@card-large-offset-x: -53px;
+@card-large-offset-y: 0px;
+@card-large-width: 37px;
+@card-large-height: 26px;
+@card-large-total-width: 195px;
+@card-large-total-height: 170px;
+@card-large-image: '../images/sprite.png';
+@card-large: 53px 0px -53px 0px 37px 26px 195px 170px '../images/sprite.png' 'card-large';
+@card-wh-numbers-name: 'card-wh-numbers';
+@card-wh-numbers-x: 42px;
+@card-wh-numbers-y: 41px;
+@card-wh-numbers-offset-x: -42px;
+@card-wh-numbers-offset-y: -41px;
+@card-wh-numbers-width: 31px;
+@card-wh-numbers-height: 22px;
+@card-wh-numbers-total-width: 195px;
+@card-wh-numbers-total-height: 170px;
+@card-wh-numbers-image: '../images/sprite.png';
+@card-wh-numbers: 42px 41px -42px -41px 31px 22px 195px 170px '../images/sprite.png' 'card-wh-numbers';
+@card-wh-plus-name: 'card-wh-plus';
+@card-wh-plus-x: 0px;
+@card-wh-plus-y: 103px;
+@card-wh-plus-offset-x: 0px;
+@card-wh-plus-offset-y: -103px;
+@card-wh-plus-width: 28px;
+@card-wh-plus-height: 20px;
+@card-wh-plus-total-width: 195px;
+@card-wh-plus-total-height: 170px;
+@card-wh-plus-image: '../images/sprite.png';
+@card-wh-plus: 0px 103px 0px -103px 28px 20px 195px 170px '../images/sprite.png' 'card-wh-plus';
+@card-name: 'card';
+@card-x: 102px;
+@card-y: 69px;
+@card-offset-x: -102px;
+@card-offset-y: -69px;
+@card-width: 18px;
+@card-height: 14px;
+@card-total-width: 195px;
+@card-total-height: 170px;
+@card-image: '../images/sprite.png';
+@card: 102px 69px -102px -69px 18px 14px 195px 170px '../images/sprite.png' 'card';
+@check-attention-name: 'check-attention';
+@check-attention-x: 32px;
+@check-attention-y: 69px;
+@check-attention-offset-x: -32px;
+@check-attention-offset-y: -69px;
+@check-attention-width: 32px;
+@check-attention-height: 24px;
+@check-attention-total-width: 195px;
+@check-attention-total-height: 170px;
+@check-attention-image: '../images/sprite.png';
+@check-attention: 32px 69px -32px -69px 32px 24px 195px 170px '../images/sprite.png' 'check-attention';
+@check-dark-name: 'check-dark';
+@check-dark-x: 181px;
+@check-dark-y: 53px;
+@check-dark-offset-x: -181px;
+@check-dark-offset-y: -53px;
+@check-dark-width: 12px;
+@check-dark-height: 10px;
+@check-dark-total-width: 195px;
+@check-dark-total-height: 170px;
+@check-dark-image: '../images/sprite.png';
+@check-dark: 181px 53px -181px -53px 12px 10px 195px 170px '../images/sprite.png' 'check-dark';
+@check-light-name: 'check-light';
+@check-light-x: 83px;
+@check-light-y: 155px;
+@check-light-offset-x: -83px;
+@check-light-offset-y: -155px;
+@check-light-width: 15px;
+@check-light-height: 11px;
+@check-light-total-width: 195px;
+@check-light-total-height: 170px;
+@check-light-image: '../images/sprite.png';
+@check-light: 83px 155px -83px -155px 15px 11px 195px 170px '../images/sprite.png' 'check-light';
+@clip-name: 'clip';
+@clip-x: 181px;
+@clip-y: 37px;
+@clip-offset-x: -181px;
+@clip-offset-y: -37px;
+@clip-width: 13px;
+@clip-height: 11px;
+@clip-total-width: 195px;
+@clip-total-height: 170px;
+@clip-image: '../images/sprite.png';
+@clip: 181px 37px -181px -37px 13px 11px 195px 170px '../images/sprite.png' 'clip';
+@close-large-name: 'close-large';
+@close-large-x: 0px;
+@close-large-y: 155px;
+@close-large-offset-x: 0px;
+@close-large-offset-y: -155px;
+@close-large-width: 16px;
+@close-large-height: 15px;
+@close-large-total-width: 195px;
+@close-large-total-height: 170px;
+@close-large-image: '../images/sprite.png';
+@close-large: 0px 155px 0px -155px 16px 15px 195px 170px '../images/sprite.png' 'close-large';
+@close-name: 'close';
+@close-x: 21px;
+@close-y: 155px;
+@close-offset-x: -21px;
+@close-offset-y: -155px;
+@close-width: 15px;
+@close-height: 15px;
+@close-total-width: 195px;
+@close-total-height: 170px;
+@close-image: '../images/sprite.png';
+@close: 21px 155px -21px -155px 15px 15px 195px 170px '../images/sprite.png' 'close';
+@facebook-dark-name: 'facebook-dark';
+@facebook-dark-x: 78px;
+@facebook-dark-y: 41px;
+@facebook-dark-offset-x: -78px;
+@facebook-dark-offset-y: -41px;
+@facebook-dark-width: 11px;
+@facebook-dark-height: 20px;
+@facebook-dark-total-width: 195px;
+@facebook-dark-total-height: 170px;
+@facebook-dark-image: '../images/sprite.png';
+@facebook-dark: 78px 41px -78px -41px 11px 20px 195px 170px '../images/sprite.png' 'facebook-dark';
+@guestion-name: 'guestion';
+@guestion-x: 157px;
+@guestion-y: 101px;
+@guestion-offset-x: -157px;
+@guestion-offset-y: -101px;
+@guestion-width: 17px;
+@guestion-height: 17px;
+@guestion-total-width: 195px;
+@guestion-total-height: 170px;
+@guestion-image: '../images/sprite.png';
+@guestion: 157px 101px -157px -101px 17px 17px 195px 170px '../images/sprite.png' 'guestion';
+@heart-empty-name: 'heart-empty';
+@heart-empty-x: 63px;
+@heart-empty-y: 155px;
+@heart-empty-offset-x: -63px;
+@heart-empty-offset-y: -155px;
+@heart-empty-width: 15px;
+@heart-empty-height: 13px;
+@heart-empty-total-width: 195px;
+@heart-empty-total-height: 170px;
+@heart-empty-image: '../images/sprite.png';
+@heart-empty: 63px 155px -63px -155px 15px 13px 195px 170px '../images/sprite.png' 'heart-empty';
+@heart-full-name: 'heart-full';
+@heart-full-x: 181px;
+@heart-full-y: 19px;
+@heart-full-offset-x: -181px;
+@heart-full-offset-y: -19px;
+@heart-full-width: 14px;
+@heart-full-height: 13px;
+@heart-full-total-width: 195px;
+@heart-full-total-height: 170px;
+@heart-full-image: '../images/sprite.png';
+@heart-full: 181px 19px -181px -19px 14px 13px 195px 170px '../images/sprite.png' 'heart-full';
+@heart-name: 'heart';
+@heart-x: 125px;
+@heart-y: 69px;
+@heart-offset-x: -125px;
+@heart-offset-y: -69px;
+@heart-width: 26px;
+@heart-height: 26px;
+@heart-total-width: 195px;
+@heart-total-height: 170px;
+@heart-image: '../images/sprite.png';
+@heart: 125px 69px -125px -69px 26px 26px 195px 170px '../images/sprite.png' 'heart';
+@instagram-dark-name: 'instagram-dark';
+@instagram-dark-x: 56px;
+@instagram-dark-y: 128px;
+@instagram-dark-offset-x: -56px;
+@instagram-dark-offset-y: -128px;
+@instagram-dark-width: 21px;
+@instagram-dark-height: 21px;
+@instagram-dark-total-width: 195px;
+@instagram-dark-total-height: 170px;
+@instagram-dark-image: '../images/sprite.png';
+@instagram-dark: 56px 128px -56px -128px 21px 21px 195px 170px '../images/sprite.png' 'instagram-dark';
+@label-large-name: 'label-large';
+@label-large-x: 0px;
+@label-large-y: 69px;
+@label-large-offset-x: 0px;
+@label-large-offset-y: -69px;
+@label-large-width: 27px;
+@label-large-height: 29px;
+@label-large-total-width: 195px;
+@label-large-total-height: 170px;
+@label-large-image: '../images/sprite.png';
+@label-large: 0px 69px 0px -69px 27px 29px 195px 170px '../images/sprite.png' 'label-large';
+@letter-name: 'letter';
+@letter-x: 86px;
+@letter-y: 103px;
+@letter-offset-x: -86px;
+@letter-offset-y: -103px;
+@letter-width: 23px;
+@letter-height: 16px;
+@letter-total-width: 195px;
+@letter-total-height: 170px;
+@letter-image: '../images/sprite.png';
+@letter: 86px 103px -86px -103px 23px 16px 195px 170px '../images/sprite.png' 'letter';
+@newsletter-name: 'newsletter';
+@newsletter-x: 114px;
+@newsletter-y: 103px;
+@newsletter-offset-x: -114px;
+@newsletter-offset-y: -103px;
+@newsletter-width: 23px;
+@newsletter-height: 16px;
+@newsletter-total-width: 195px;
+@newsletter-total-height: 170px;
+@newsletter-image: '../images/sprite.png';
+@newsletter: 114px 103px -114px -103px 23px 16px 195px 170px '../images/sprite.png' 'newsletter';
+@pintest-name: 'pintest';
+@pintest-x: 157px;
+@pintest-y: 54px;
+@pintest-offset-x: -157px;
+@pintest-offset-y: -54px;
+@pintest-width: 16px;
+@pintest-height: 20px;
+@pintest-total-width: 195px;
+@pintest-total-height: 170px;
+@pintest-image: '../images/sprite.png';
+@pintest: 157px 54px -157px -54px 16px 20px 195px 170px '../images/sprite.png' 'pintest';
+@position-attention-name: 'position-attention';
+@position-attention-x: 95px;
+@position-attention-y: 0px;
+@position-attention-offset-x: -95px;
+@position-attention-offset-y: 0px;
+@position-attention-width: 25px;
+@position-attention-height: 34px;
+@position-attention-total-width: 195px;
+@position-attention-total-height: 170px;
+@position-attention-image: '../images/sprite.png';
+@position-attention: 95px 0px -95px 0px 25px 34px 195px 170px '../images/sprite.png' 'position-attention';
+@position-name: 'position';
+@position-x: 157px;
+@position-y: 27px;
+@position-offset-x: -157px;
+@position-offset-y: -27px;
+@position-width: 16px;
+@position-height: 22px;
+@position-total-width: 195px;
+@position-total-height: 170px;
+@position-image: '../images/sprite.png';
+@position: 157px 27px -157px -27px 16px 22px 195px 170px '../images/sprite.png' 'position';
+@question-name: 'question';
+@question-x: 181px;
+@question-y: 0px;
+@question-offset-x: -181px;
+@question-offset-y: 0px;
+@question-width: 14px;
+@question-height: 14px;
+@question-total-width: 195px;
+@question-total-height: 170px;
+@question-image: '../images/sprite.png';
+@question: 181px 0px -181px 0px 14px 14px 195px 170px '../images/sprite.png' 'question';
+@ruller-name: 'ruller';
+@ruller-x: 108px;
+@ruller-y: 128px;
+@ruller-offset-x: -108px;
+@ruller-offset-y: -128px;
+@ruller-width: 27px;
+@ruller-height: 13px;
+@ruller-total-width: 195px;
+@ruller-total-height: 170px;
+@ruller-image: '../images/sprite.png';
+@ruller: 108px 128px -108px -128px 27px 13px 195px 170px '../images/sprite.png' 'ruller';
+@safety-large-name: 'safety-large';
+@safety-large-x: 125px;
+@safety-large-y: 33px;
+@safety-large-offset-x: -125px;
+@safety-large-offset-y: -33px;
+@safety-large-width: 23px;
+@safety-large-height: 31px;
+@safety-large-total-width: 195px;
+@safety-large-total-height: 170px;
+@safety-large-image: '../images/sprite.png';
+@safety-large: 125px 33px -125px -33px 23px 31px 195px 170px '../images/sprite.png' 'safety-large';
+@search-open-name: 'search-open';
+@search-open-x: 0px;
+@search-open-y: 128px;
+@search-open-offset-x: 0px;
+@search-open-offset-y: -128px;
+@search-open-width: 23px;
+@search-open-height: 22px;
+@search-open-total-width: 195px;
+@search-open-total-height: 170px;
+@search-open-image: '../images/sprite.png';
+@search-open: 0px 128px 0px -128px 23px 22px 195px 170px '../images/sprite.png' 'search-open';
+@search-name: 'search';
+@search-x: 28px;
+@search-y: 128px;
+@search-offset-x: -28px;
+@search-offset-y: -128px;
+@search-width: 23px;
+@search-height: 22px;
+@search-total-width: 195px;
+@search-total-height: 170px;
+@search-image: '../images/sprite.png';
+@search: 28px 128px -28px -128px 23px 22px 195px 170px '../images/sprite.png' 'search';
+@spritesheet-width: 195px;
+@spritesheet-height: 170px;
+@spritesheet-image: '../images/sprite.png';
+@spritesheet-sprites: @accesebility @account @arrow-dark @attention @bag-large @bag-light @bag @calendar @car-large @car @card-attention @card-checked @card-large @card-wh-numbers @card-wh-plus @card @check-attention @check-dark @check-light @clip @close-large @close @facebook-dark @guestion @heart-empty @heart-full @heart @instagram-dark @label-large @letter @newsletter @pintest @position-attention @position @question @ruller @safety-large @search-open @search;
+@spritesheet: 195px 170px '../images/sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}
