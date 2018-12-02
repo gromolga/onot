@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<config>
+   <type name="Magento\Ui\Component\Wysiwyg\ConfigInterface">
+        <plugin name="project_wysiwyg_config"
+                type="Project\Wysiwyg\Plugin\Config"
+                sortOrder="10"/>
+    </type>
+</config>

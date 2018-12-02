@@ -1,0 +1,42 @@
+& when (@media-common = true) {
+  .header-top-line {
+    position: relative;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-align: center;
+    background-color: @pg-grey50-color;
+    p:last-of-type {
+      font-size: smaller;
+    }
+  }
+  .header-top-close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    height: 10px;
+    width: 10px;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 10px;
+      background-color: #000;
+    }
+    &:before {
+     transform: translate(5px, 4px) rotate(40deg);
+    }
+    &:after {
+      transform: translate(5px, 4px) rotate(-40deg);
+    }
+  }
+  .logo {
+    float: none;
+    margin: 0 auto;
+    img {
+      margin: 5px auto;
+      max-width: 155px;
+    }
+  }
+}
