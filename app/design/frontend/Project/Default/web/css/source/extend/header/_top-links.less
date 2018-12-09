@@ -1,0 +1,103 @@
+& when (@media-common = true) {
+    .header.panel {
+        .links {
+            display: block;
+        }
+        ul.header.links {
+            float: none;
+        }
+    }
+    .wishlist {
+        list-style-type: none;
+        a {
+            font-size: 0;
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .header-main {
+        .minicart-wrapper {
+            margin-top: 0;
+        }
+    }
+    .wishlist {
+        .sprite(@heart-icon-mobile);
+    }
+    .header-map,
+    .header-handicapped,
+    .panel.header {
+        display: none;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-wrapper {
+        .panel.wrapper {
+            margin: 0 ;
+            border-bottom: none;
+        }
+        .panel.header {
+            padding: 0;
+        }
+    }
+    .minicart-wrapper {
+        margin-left: 0;
+    }
+    .wishlist {
+        .sprite(@heart-icon);
+    }
+    .panel.header {
+        .header.links {
+            li {
+                margin: 0;
+                &:first-of-type {
+                    a {
+                        padding-right: 0;
+                    }
+                }
+                &:not(:first-of-type) {
+                    a {
+                        border-right: 1px solid @pg-dark-color;
+                    }
+                }
+                &:last-of-type {
+                    a {
+                        padding-left: 0;
+                    }
+                }
+            }
+            a {
+                padding: 0 5px;
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .panel.header,
+    .header-map,
+    .header-handicapped {
+        display: flex;
+    }
+    .header-map,
+    .header-handicapped {
+        margin: 4px 14px 0 13px;
+    }
+    .header-map {
+        .sprite(@position-icon);
+    }
+    .header-handicapped {
+        .sprite(@accesebility-icon);
+    }
+    .header.panel > .header.links {
+        margin: 5px 0 0 0;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .page-wrapper .panel.wrapper {
+        margin: 10px 10px 0 10px;
+    }
+    .header.panel > .header.links {
+        margin: 0;
+        > li a {
+            font-size: 1.8rem;
+        }
+    }
+}

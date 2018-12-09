@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+     <body>
+        <referenceBlock name="register-link">
+            <arguments>
+                <argument name="template" xsi:type="string">Magento_Customer::links/registration.phtml</argument>
+            </arguments>
+        </referenceBlock>
+         <referenceBlock name="my-account-link">
+             <arguments>
+                 <argument name="template" xsi:type="string">Magento_Customer::links/my-account.phtml</argument>
+             </arguments>
+         </referenceBlock>
+     </body>
+</page>

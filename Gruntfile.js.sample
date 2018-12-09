@@ -38,10 +38,13 @@ module.exports = function (grunt) {
     _.each({
         /**
          * Assembling tasks.
-         * ToDo: define default tasks.
          */
         default: function () {
-            grunt.log.subhead('I\'m default task and at the moment I\'m empty, sorry :/');
+            grunt.task.run([
+                "exec:default",
+                "less:default",
+                "watch"
+            ])
         },
 
         /**

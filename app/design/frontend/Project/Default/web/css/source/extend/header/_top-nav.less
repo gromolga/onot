@@ -1,0 +1,28 @@
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .nav-sections {
+        order: 3;
+        grid-column: 1 / span 3;
+        background: none;
+    }
+    .navigation {
+        text-align: center;
+        font: 1.6rem/1.2 'Montag', sans-serif;
+        text-transform: uppercase;
+        background: none;
+        .level0.active > .level-top {
+            color: @pg-attention-color;
+            border-color: transparent;
+        }
+        .level0 > .level-top {
+            line-height: 43px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            &:hover {
+                span {
+                    color: @pg-attention-color;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}

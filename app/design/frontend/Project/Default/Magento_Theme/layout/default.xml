@@ -2,21 +2,63 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="advanced-search-link" remove="true"/>
+        <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="my-account-link" remove="true"/>
 
-        <move element="minicart" destination="header-wrapper"/>
-        <!--<move element="wish-list-link" destination="header-wrapper"/>-->
-        <!--<move element="authorization-link" destination="header-wrapper"/>-->
+        <move element="minicart" destination="header-left-col" after="-"/>
+        <move element="wish-list-link" destination="header-left-col" before="minicart"/>
+        <move element="header.panel.wrapper" destination="header-left-col" before="-"/>
+        <move element="logo" destination="header-center-col"/>
+        <move element="header-toggle-nav" destination="header-right-col"/>
+        <move element="header-map" destination="header-right-col"/>
+        <move element="header-handicapped" destination="header-right-col"/>
+        <move element="navigation.sections" destination="header-nav"/>
+        <move element="header.container" destination="header-nav"/>
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+            </arguments>
+        </referenceBlock>
 
         <referenceContainer name="header.container">
-            <block name="header-top-line" template="Magento_Theme::header-top-line.phtml" before="-">
+            <block name="header-toggle-nav" template="Magento_Theme::html/header/toggle-nav.phtml"/>
+            <block class="Magento\Framework\View\Element\Html\Link" name="header-map" after="search-toggle">
+                <arguments>
+                    <argument name="template" xsi:type="string">Magento_Theme::link.phtml</argument>
+                    <argument name="href" xsi:type="string">#</argument>
+                    <argument name="class" xsi:type="string">header-map</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="header-handicapped" after="header-map">
+                <arguments>
+                    <argument name="template" xsi:type="string">Magento_Theme::link.phtml</argument>
+                    <argument name="href" xsi:type="string">#</argument>
+                    <argument name="class" xsi:type="string">header-handicapped</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="header-nav">
+            <container htmlTag="div" htmlClass="header-right-col" name="header-right-col"/>
+            <container htmlTag="div" htmlClass="header-center-col" name="header-center-col"/>
+            <container htmlTag="div" htmlClass="header-left-col" name="header-left-col"/>
+        </referenceContainer>
+
+        <referenceContainer name="page.wrapper">
+            <block name="header-top-line" template="Magento_Theme::html/header/header-top-line.phtml" before="-">
                 <block class="Magento\Cms\Block\Block" name="header-top-line-content">
                     <arguments>
                         <argument name="block_id" xsi:type="string">header-top-line</argument>
                     </arguments>
                 </block>
             </block>
+
+            <container name="header-nav" htmlTag="div" htmlClass="header-main js-header-sticky" before="-">
+                <block name="header-sticky" template="Magento_Theme::html/header/header-sticky.phtml"/>
+            </container>
         </referenceContainer>
+
     </body>
 </page>
 
