@@ -1,8 +1,4 @@
 <?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
 
 // @codingStandardsIgnoreFile
 
@@ -14,7 +10,9 @@
 <?php if ($block->isHomePage()):?>
 <strong class="logo">
     <?php else: ?>
-    <a class="logo" href="<?= $block->getUrl('') ?>" title="<?= /* @escapeNotVerified */ $storeName ?>">
+    <a class="logo"
+       href="<?= $block->getUrl('') ?>"
+       title="<?= /* @escapeNotVerified */ $storeName ?>">
         <?php endif ?>
         <img src="<?= /* @escapeNotVerified */ $block->getLogoSrc() ?>"
              title="<?= /* @escapeNotVerified */ $block->getLogoAlt() ?>"

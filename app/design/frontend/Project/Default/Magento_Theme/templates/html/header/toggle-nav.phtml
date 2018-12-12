@@ -2,10 +2,9 @@
 // @codingStandardsIgnoreFile
 
 /**
- * @var \Magento\Theme\Block\Html\Header\Logo $block
+ * @var \Magento\Framework\View\Element\Template $block
  */
 ?>
-<?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
-
-<span data-action="toggle-nav" class="action nav-toggle"><span><?= /* @escapeNotVerified */ __('Toggle Nav') ?></span></span>
-
+<span data-action="toggle-nav" class="action nav-toggle">
+    <span><?php echo $block->escapeHtml(__('Toggle Nav')) ?></span>
+</span>

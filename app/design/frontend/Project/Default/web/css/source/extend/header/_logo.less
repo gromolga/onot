@@ -1,3 +1,7 @@
+//
+//  Common
+//  _____________________________________________
+
 & when (@media-common = true) {
     .header-main {
         .logo {
@@ -6,16 +10,26 @@
         }
     }
 }
+
+//
+//  Mobile
+//  _____________________________________________
+
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .header-main {
         .logo {
             img {
                 width: 155px;
-                margin: 12px auto 6px auto;
+                margin: 12px auto 6px;
             }
         }
     }
 }
+
+//
+//  Desktop
+//  _____________________________________________
+
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .header-main {
         .logo {

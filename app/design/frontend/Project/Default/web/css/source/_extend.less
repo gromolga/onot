@@ -1,10 +1,13 @@
 //Sprite icons
 
 @import '_sprite.less';
-.icon {
-  display: inline-block;
+
+& when (@media-common = true) {
+  .icon {
+    display: inline-block;
+  }
+  .sprites(@spritesheet-sprites);
 }
-.sprites(@spritesheet-sprites);
 
 //Fonts
 

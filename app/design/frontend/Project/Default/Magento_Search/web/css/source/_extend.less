@@ -1,5 +1,10 @@
+//
+//  Common
+//  _____________________________________________
+
 & when (@media-common = true) {
     .search-toggle-btn {
+        position: relative;
         font-size: 0;
         border: none;
         background-color: transparent;
@@ -9,32 +14,37 @@
         &:focus {
             box-shadow: none;
             border: none;
-            background-color: transparent;
+            background: none;
             .sprite(@search-icon-mobile);
         }
     }
+
     .search-toggle-close {
-        .search-toggle-btn {
-            position: relative;
+        &:before,
+        &:after {
+            content: '';
+            height: 2px;
+            width: 20px;
+            position: absolute;
+            background-color: @pj-close-btn-color;
+        }
+        &:before {
+            transform: translate(9px, 6px) rotate(45deg);
+        }
+        &:after {
+            transform: translate(9px, 6px) rotate(-45deg);
+        }
+    }
+    .search-toggle-btn.search-toggle-close {
+        background: none;
+        &:hover,
+        &:active,
+        &:focus {
             background: none;
-            &:before,
-            &:after {
-                content: '';
-                height: 2px;
-                width: 20px;
-                position: absolute;
-                background-color: @pj-close-btn-color;
-            }
-            &:before {
-                transform: translate(9px, 6px) rotate(45deg);
-            }
-            &:after {
-                transform: translate(9px, 6px) rotate(-45deg);
-            }
         }
     }
     .block-search {
-        ._hide-element;
+        display: none;
         margin: 0;
         input {
             position: static;
@@ -55,7 +65,7 @@
             border: none;
         }
     }
-    ._show-element.block-search {
+    .block-search.show {
         display: block;
     }
     .field.search {
@@ -72,6 +82,11 @@
         }
     }
 }
+
+//
+//  Mobile
+//  _____________________________________________
+
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .block-search {
         .control {
@@ -82,6 +97,11 @@
         }
     }
 }
+
+//
+//  Desktop
+//  _____________________________________________
+
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .search-toggle {
         margin: 5px 6px 0 6px;
@@ -95,18 +115,16 @@
         }
     }
     .search-toggle-close {
-        .search-toggle-btn {
-            background: none;
-            &:before,
-            &:after {
-                width: 30px;
-            }
-            &:before {
-                transform: translate(13px, 4px) rotate(42deg);
-            }
-            &:after {
-                transform: translate(13px, 4px) rotate(-42deg);
-            }
+        background: none;
+        &:before,
+        &:after {
+            width: 30px;
+        }
+        &:before {
+            transform: translate(13px, 4px) rotate(42deg);
+        }
+        &:after {
+            transform: translate(13px, 4px) rotate(-42deg);
         }
     }
     .block-search {

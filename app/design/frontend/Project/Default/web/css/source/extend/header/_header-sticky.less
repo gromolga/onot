@@ -1,3 +1,7 @@
+//
+//  Common
+//  _____________________________________________
+
 & when (@media-common = true) {
     .header-sticky {
         position: fixed;
@@ -6,69 +10,96 @@
         right: 0;
         z-index: 100;
         background-color: @pg-white-color;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: @pg-white-color;
+            z-index: -1;
+        }
+        &:before {
+            left: 0;
+            right: -9999px;
+        }
+        &:after {
+            right: 0;
+            left: -9999px;
+        }
+
         .link.wishlist {
             display: none;
         }
+
         .header.content {
             padding-bottom: 6px;
         }
+
         .header-top-line {
             display: none;
         }
     }
 }
+
+//
+//  Mobile
+//  _____________________________________________
+
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    .page-wrapper {
-        .header-sticky {
-            padding: 30px 0 0 0;
-        }
-    }
     .header-sticky {
+        padding: 30px 0 0;
         .logo {
             display: none;
         }
     }
 }
+
+//
+//  Desktop
+//  _____________________________________________
+
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .page-wrapper {
-        .header-sticky {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
    .header-sticky {
+       grid-template-columns: 1fr 1fr 1fr;
        .header-right-col {
            display: none;
        }
+
        .header-left-col {
            grid-column: 3 / span 1;
            > * {
                margin-top: 0;
            }
        }
+
        .header-center-col {
            grid-column: 1 / span 1;
        }
+
        .panel.header {
            padding: 0;
        }
    }
 }
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
-    .page-wrapper {
-        .header-sticky {
-            grid-template-columns: 1fr 4fr 1fr;
-            .panel.wrapper {
-                margin: 5px 0 0 0;
-            }
-        }
-    }
     .header-sticky {
+        grid-template-columns: 1fr 4fr 1fr;
         .nav-sections {
             grid-column: 2 / span 1;
-            grid-row: 2;
+            grid-row: 1;
             display: flex;
             align-items: center;
             margin-bottom: 0;
         }
+
+        .panel.wrapper {
+            margin: 0;
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .header-sticky {
+        grid-template-columns: 1fr 4fr 1fr;
     }
 }

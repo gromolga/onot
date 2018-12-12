@@ -4,19 +4,13 @@
  */
 ?>
 
-<div class="header-top-line _no-margin js-header-top-line">
-    <span id="header-top-close" class="header-top-close js-header-top-close"></span>
+<div class="header-top-line" data-action="header-top-close">
+    <span id="header-top-close" class="header-top-close"
+          data-mage-init='{"js/header-top-close": {}}'
+          ></span>
     <div class="header-top-line-content">
         <?php echo $block->getChildHtml() ?>
     </div>
 </div>
 
-
-<script>
-    require(['jquery'], function ($) {
-        $('.js-header-top-close').click(function () {
-            $('.js-header-top-line').addClass('_hide-element');
-        })
-    })
-</script>
 

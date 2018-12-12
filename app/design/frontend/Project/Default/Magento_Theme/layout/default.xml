@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="header" remove="true"/>
         <referenceBlock name="my-account-link" remove="true"/>
@@ -26,23 +27,17 @@
             <block class="Magento\Framework\View\Element\Html\Link" name="header-map" after="search-toggle">
                 <arguments>
                     <argument name="template" xsi:type="string">Magento_Theme::link.phtml</argument>
-                    <argument name="href" xsi:type="string">#</argument>
+                    <argument name="path" xsi:type="string">#</argument>
                     <argument name="class" xsi:type="string">header-map</argument>
                 </arguments>
             </block>
-            <block class="Magento\Framework\View\Element\Html\Link" name="header-handicapped" after="header-map">
+            <block class="Magento\Framework\View\Element\Html\Link" name="header-handicapped">
                 <arguments>
                     <argument name="template" xsi:type="string">Magento_Theme::link.phtml</argument>
-                    <argument name="href" xsi:type="string">#</argument>
+                    <argument name="path" xsi:type="string">#</argument>
                     <argument name="class" xsi:type="string">header-handicapped</argument>
                 </arguments>
             </block>
-        </referenceContainer>
-
-        <referenceContainer name="header-nav">
-            <container htmlTag="div" htmlClass="header-right-col" name="header-right-col"/>
-            <container htmlTag="div" htmlClass="header-center-col" name="header-center-col"/>
-            <container htmlTag="div" htmlClass="header-left-col" name="header-left-col"/>
         </referenceContainer>
 
         <referenceContainer name="page.wrapper">
@@ -54,9 +49,13 @@
                 </block>
             </block>
 
-            <container name="header-nav" htmlTag="div" htmlClass="header-main js-header-sticky" before="-">
-                <block name="header-sticky" template="Magento_Theme::html/header/header-sticky.phtml"/>
-            </container>
+            <block name="header-nav" template="Magento_Theme::html/header/header-sticky.phtml" after="header-top-line">
+                <!--<container htmlTag="div" htmlClass="header-sticky-box" name="header-sticky-box">-->
+                    <container htmlTag="div" htmlClass="header-right-col" name="header-right-col"/>
+                    <container htmlTag="div" htmlClass="header-center-col" name="header-center-col"/>
+                    <container htmlTag="div" htmlClass="header-left-col" name="header-left-col"/>
+                <!--</container>-->
+            </block>
         </referenceContainer>
 
     </body>
