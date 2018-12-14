@@ -7,8 +7,225 @@
     font: 1.6rem/1.2 'Spacer', sans-serif;
     direction: rtl;
   }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="url"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="number"],
+  input[type="datetime"],
+  input[type="email"] {
+    height: 42px;
+    font-size: 1.8rem;
+    border-color: @pg-grey30-color;
+    color: @pg-dark-color;
+    outline: none;
+    .lib-input-placeholder(@pg-dark-color)
+  }
+
+  .btn-accent-to-dark,
+  .btn-light-to-accent,
+  .btn-light-to-light,
+  .btn-light-to-medium,
+  .btn-light-to-dark,
+  .btn-dark-to-dark {
+    .lib-link-as-button();
+    border-radius: 0;
+  }
+
+  .btn-accent-to-dark {
+    .lib-button(
+      @_button-padding: 12px 15px,
+      @_button-font-size: 1.8rem,
+      @_button-font-weight: 100,
+      @_button-background: @pg-accent-color,
+      @_button-color: @pg-white-color,
+      @_button-background-hover: @pg-dark-color,
+      @_button-color-hover: @pg-white-color,
+      @_button-border: 1px solid @pg-accent-color,
+      @_button-border-hover: 1px solid @pg-dark-color
+    );
+  }
+
+  .btn-light-to-accent {
+    .lib-button(
+      @_button-padding: 12px 15px,
+      @_button-font-size: 1.8rem,
+      @_button-font-weight: 100,
+      @_button-background: @pg-white-color,
+      @_button-color: @pg-dark-color,
+      @_button-background-hover: @pg-accent-color,
+      @_button-color-hover: @pg-white-color,
+      @_button-border: 1px solid @pg-grey30-color,
+      @_button-border-hover: 1px solid @pg-accent-color
+    )
+  }
+
+  .btn-light-to-light {
+    .lib-button(
+      @_button-padding: 12px 15px,
+      @_button-font-size: 1.8rem,
+      @_button-font-weight: 100,
+      @_button-background: @pg-white-color,
+      @_button-color: @pg-dark-color,
+      @_button-background-hover: @pg-grey60-color,
+      @_button-color-hover: @pg-dark-color,
+      @_button-border: @pg-border-light-bg,
+      @_button-border-hover: 1px solid @pg-grey60-color
+    )
+  }
+
+  .btn-light-to-medium {
+    .lib-button(
+      @_button-padding: 12px 15px,
+      @_button-font-size: 1.8rem,
+      @_button-font-weight: 100,
+      @_button-background: @pg-white-color,
+      @_button-color: @pg-dark-color,
+      @_button-background-hover: @pg-grey50-color,
+      @_button-color-hover: @pg-dark-color,
+      @_button-border: @pg-grey30-color,
+      @_button-border-hover: 1px solid @pg-grey30-color
+    )
+  }
+
+  .btn-light-to-dark {
+    .lib-button(
+      @_button-padding: 12px 15px,
+      @_button-font-size: 1.8rem,
+      @_button-font-weight: 100,
+      @_button-background: @pg-white-color,
+      @_button-color: @pg-dark-color,
+      @_button-background-hover: @pg-dark-color,
+      @_button-color-hover: @pg-white-color,
+      @_button-border: @pg-dark-color
+    )
+  }
+
+  .btn-dark-to-dark {
+    .lib-button(
+      @_button-padding: 12px 15px,
+      @_button-font-size: 1.8rem,
+      @_button-font-weight: 100,
+      @_button-background: @pg-dark-color,
+      @_button-color: @pg-white-color,
+      @_button-background-hover: @pg-grey10-color,
+      @_button-color-hover: @pg-white-color,
+      @_button-border: @pg-dark-color
+    )
+  }
+
+  .no-margin-p {
+    p {
+      margin: 0;
+    }
+  }
+
+  .custom-checkbox {
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"] + label {
+      position: relative;
+      display: inline-block;
+      padding: 0 32px 0 0;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] + label:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 1px solid @pg-grey30-color;
+    }
+  }
 }
 
+//
+//  Mobile
+//  _____________________________________________
 
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  h1,
+  .h1 {
+    font: 3.8rem/1.2 @pg-base-font-name;
+  }
+  h2,
+  .h2 {
+    font: 3.8rem/1.2 @pg-base-font-name;
+  }
+  h3,
+  .h3 {
+    font: 3.2rem/1.2 @pg-base-font-name;
+  }
+  h4,
+  .h4 {
+    font: 2rem/1.2 @pg-base-font-name;
+  }
+  h5,
+  .h5 {
 
+  }
+  h6,
+  .h6 {
+    font: 2rem/1.2 @pg-base-font-name;
+  }
 
+  input[type="checkbox"] + label:before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .custom-checkbox {
+    input[type="checkbox"]:checked + label:before {
+      .sprite(@check-large-icon);
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  h1,
+  .h1 {
+    font: 3.8rem/1.2 @pg-base-font-name;
+  }
+  h2,
+  .h2 {
+    font: 3.8rem/1.2 @pg-base-font-name;
+  }
+  h3,
+  .h3 {
+    font: 3.2rem/1.2 @pg-base-font-name;
+  }
+  h4,
+  .h4 {
+    font: 2.5rem/1.2 @pg-base-font-name;
+  }
+  h5,
+  .h5 {
+
+  }
+  h6,
+  .h6 {
+    font: 2rem/1.2 @pg-base-font-name;
+  }
+
+  input[type="checkbox"] + label:before {
+    margin-top: 3px;
+    margin-right: 2px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .custom-checkbox {
+    input[type="checkbox"]:checked + label:before {
+      .sprite(@check-dark-icon);
+    }
+  }
+}

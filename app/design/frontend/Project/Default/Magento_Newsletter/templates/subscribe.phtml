@@ -1,0 +1,53 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+
+?>
+<div class="footer-newsletter">
+    <div class="content">
+        <form class="form subscribe"
+              novalidate
+              action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+              method="post"
+              data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+              id="newsletter-validate-detail">
+            <h4 class="h4">
+                <?= $block->escapeHtml(__('Subscribe to our newsletter for updates on promotions and benefits.')) ?>
+            </h4>
+            <div class="footer-form-inputs">
+                <div class="field newsletter">
+                    <div class="control">
+                        <input name="email" type="email" id="newsletter"
+                               placeholder="<?= $block->escapeHtmlAttr(__('Enter your email address')) ?>"
+                               data-validate="{required:true, 'validate-email':true}"/>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="action subscribe primary btn-accent-to-dark btn-small" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit">
+                        <span><?= $block->escapeHtml(__('Registration')) ?></span>
+                    </button>
+                </div>
+            </div>
+            <div class="newsletter-confirm custom-checkbox">
+                <div class="control">
+                    <input type="checkbox"
+                           id="newsletter-confirm"
+                           name="confirm"
+                           value="1"
+                           checked
+                           data-validate="{required:true}"
+                    />
+                    <label for="newsletter-confirm">
+                        <?= $block->escapeHtml(__('I confirm receipt of promotional information, promotions and benefits via email')) ?>
+                    </label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

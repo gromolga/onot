@@ -5,6 +5,8 @@
     <body>
         <referenceBlock name="header" remove="true"/>
         <referenceBlock name="my-account-link" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
 
         <move element="minicart" destination="header-left-col" after="-"/>
         <move element="wish-list-link" destination="header-left-col" before="minicart"/>
@@ -15,6 +17,7 @@
         <move element="header-handicapped" destination="header-right-col"/>
         <move element="navigation.sections" destination="header-nav"/>
         <move element="header.container" destination="header-nav"/>
+        <move element="form.subscribe" destination="pj-footer-cards" before="footer-brand"/>
 
         <referenceBlock name="logo">
             <arguments>
@@ -50,12 +53,44 @@
             </block>
 
             <block name="header-nav" template="Magento_Theme::html/header/header-sticky.phtml" after="header-top-line">
-                <!--<container htmlTag="div" htmlClass="header-sticky-box" name="header-sticky-box">-->
-                    <container htmlTag="div" htmlClass="header-right-col" name="header-right-col"/>
-                    <container htmlTag="div" htmlClass="header-center-col" name="header-center-col"/>
-                    <container htmlTag="div" htmlClass="header-left-col" name="header-left-col"/>
-                <!--</container>-->
+                <container htmlTag="div" htmlClass="header-right-col" name="header-right-col"/>
+                <container htmlTag="div" htmlClass="header-center-col" name="header-center-col"/>
+                <container htmlTag="div" htmlClass="header-left-col" name="header-left-col"/>
             </block>
+        </referenceContainer>
+
+        <referenceContainer name="footer">
+            <container name="pj-footer-cards" htmlTag="div" htmlClass="footer-cards">
+                <block name="footer-brand" template="Magento_Theme::footer/brand.phtml"/>
+            </container>
+
+            <block name="footer.navigation" template="Magento_Theme::footer/navigation.phtml">
+                <block class="Magento\Cms\Block\Block" name="footer-links-first-column" as="first-column">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer-links-first-column</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="footer-links-second-column" as="second-column">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer-links-second-column</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="footer-links-third-column" as="third-column">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">footer-links-third-column</argument>
+                    </arguments>
+                </block>
+            </block>
+
+            <!--<container name="container-wrapper" htmlTag="div" htmlClass="footer-payment-methods">-->
+                <!--<block class="Magento\Cms\Block\Block" name="footer-payment-methods">-->
+                    <!--<arguments>-->
+                        <!--<argument name="block_id" xsi:type="string">footer-payment-methods</argument>-->
+                    <!--</arguments>-->
+                <!--</block>-->
+            <!--</container>-->
         </referenceContainer>
 
     </body>

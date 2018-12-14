@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+?>
+
+<div class="footer-brand">
+    <div class="footer-brand-figure">
+        <div class="footer-brand-figure-box">
+            <div class="footer-brand-figure-logo">
+                <img src="<?php echo $block->getViewFileUrl('images/logo-light.png'); ?>" alt="">
+            </div>
+            <div class="footer-brand-figure-shadow"></div>
+        </div>
+    </div>
+    <div class="footer-brand-txt">
+        <h4 class="h4"><?php echo $block->escapeHtml(__('Join the club')) ?></h4>
+        <img src="<?php echo $block->getViewFileUrl('images/logo.png'); ?>" alt="">
+        <p class="footer-brand-p"><?php echo $block->escapeHtml(__('Enjoy unique benefits all year round!')) ?></p>
+        <a href="#" class="btn-accent-to-dark"><?php echo $block->escapeHtml(__('Details')) ?></a>
+    </div>
+</div>
