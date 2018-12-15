@@ -3,16 +3,10 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-
-}
-
-//
-//  Mobile
-//  _____________________________________________
-
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .footer.content {
+        margin: 0;
         padding: 0;
+        border: none;
     }
 }
 
@@ -21,7 +15,11 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-
+    .page-footer {
+        border-top: 1px solid @pg-border-light-bg;
+    }
 }
 
-@import './footer/_footer-cards';
+@import './footer/_footer-cards.less';
+@import './footer/_footer-navigation.less';
+@import './footer/_footer-bottom-line.less';

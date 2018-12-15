@@ -1,0 +1,72 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .footer-bottom-line {
+        background-color: @pg-grey50-color;
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        span {
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+
+        small {
+            font-size: inherit;
+        }
+    }
+
+    .footer-bottom-line-content {
+        display: flex;
+        padding: 12px 20px;
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .footer-bottom-line-content {
+        flex-direction: column;
+        text-align: center;
+        span {
+            display: block;
+        }
+    }
+
+    .footer-copyright {
+        margin-bottom: 13px;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .footer-bottom-line-content {
+        max-width: 1170px;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        font-size: 1.4rem;
+        span {
+            padding: 0 10px;
+            &:not(:last-child) {
+                border-right: 1px solid @pg-border-light-bg;
+            }
+        }
+    }
+}

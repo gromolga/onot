@@ -1,0 +1,25 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+?>
+
+<nav class="footer-nav">
+    <ul class="footer-nav-list">
+        <li class="footer-nav-link">
+            <div class="footer-nav-column">
+                <?= $block -> getChildHtml('first-column')?>
+            </div>
+        </li>
+        <li class="footer-nav-link">
+            <div class="footer-nav-column">
+                <?= $block -> getChildHtml('second-column')?>
+            </div>
+        </li>
+        <li class="footer-nav-link footer-social-list">
+            <div class="footer-nav-column footer-social-column">
+                <?= $block -> getChildHtml('third-column')?>
+            </div>
+        </li>
+    </ul>
+</nav>

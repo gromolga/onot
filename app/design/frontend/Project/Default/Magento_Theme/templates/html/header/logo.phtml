@@ -1,11 +1,9 @@
 <?php
-
-// @codingStandardsIgnoreFile
-
 /**
  * @var \Magento\Theme\Block\Html\Header\Logo $block
  */
 ?>
+
 <?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
 <?php if ($block->isHomePage()):?>
 <strong class="logo">

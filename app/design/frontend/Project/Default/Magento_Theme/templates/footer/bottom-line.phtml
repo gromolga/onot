@@ -1,0 +1,18 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+?>
+
+<div class="footer-bottom-line">
+    <div class="footer-bottom-line-content">
+        <div class="footer-copyright">
+            <span><?php echo $block->escapeHtml(__('Created by IdeoDigital')) ?></span>
+            <span><?= $block -> getChildHtml('copyright')?></span>
+        </div>
+        <div class="footer-payment-methods">
+            <?= $block -> getChildHtml('payments')?>
+        </div>
+    </div>
+</div>
+
