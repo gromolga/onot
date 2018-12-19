@@ -1,0 +1,23 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .product.data.items {
+        & > .item.title:not(.disabled),
+        & > .item.title {
+            & > .switch {
+                border: none;
+                background: none;
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+        & > .item.title.active {
+            & > .switch {
+                border-bottom: 1px solid @pg-dark-color;
+            }
+        }
+    }
+}

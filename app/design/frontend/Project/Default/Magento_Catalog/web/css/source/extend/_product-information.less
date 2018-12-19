@@ -1,0 +1,128 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .action.towishlist {
+        span {
+            display: inline-block;
+            &:before {
+                content: '';
+                display: inline-block;
+                margin: 0 10px;
+                vertical-align: middle;
+                .sprite(@heart-empty-icon);
+            }
+        }
+    }
+
+    .product-addto-links {
+        a {
+            color: @pg-dark-color;
+        }
+    }
+
+    .product-info-main .product-addto-links,
+    .product-options-bottom .product-addto-links {
+        margin: 0;
+    }
+
+    .product-info-main .action.towishlist,
+    .product-options-bottom .action.towishlist {
+        padding: 0;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .catalog-product-view {
+        .box-tocart {
+            margin: 0;
+            .action.tocart {
+                padding: 10px 80px;
+                line-height: 1.2;
+                border-radius: 0;
+                .lib-button(
+                    @_button-padding: 10px 80px,
+                    @_button-font-size: 1.8rem,
+                    @_button-font-weight: 100,
+                    @_button-background: @pg-accent-color,
+                    @_button-color: @pg-white-color,
+                    @_button-background-hover: @pg-dark-color,
+                    @_button-color-hover: @pg-white-color,
+                    @_button-border: 1px solid @pg-accent-color,
+                    @_button-border-hover: 1px solid @pg-dark-color
+                );
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    .sprite(@cart-light-icon);
+                }
+            }
+        }
+
+        .product-add-form .fieldset > .field.qty {
+            display: none;
+        }
+
+        .product-info-main .box-tocart .actions,
+        .product-options-bottom .box-tocart .actions {
+            padding-top: 0;
+        }
+    }
+
+    .product-options-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 35px;
+        align-items: center;
+    }
+
+    .swatch-attribute-options {
+        .swatch-option {
+            height: 25px;
+            min-width: 25px;
+            padding: 0;
+            border: 3px solid @pg-white-color;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+        .swatch-option.selected {
+            border: 3px solid @pg-white-color;
+            box-shadow: 0 0 0 1px @pg-border-light-bg;
+            outline: none;
+        }
+        .swatch-option.image:not(.disabled):hover,
+        .swatch-option:not(.disabled):hover {
+            outline: none;
+            border: 3px solid @pg-white-color;
+            box-shadow: 0 0 0 1px @pg-border-light-bg;
+        }
+    }
+
+    .product-info-main {
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            margin: 20px 0;
+            list-style: none;
+            img {
+                margin-left: 20px;
+            }
+            > * {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .price-final {
+
+    }
+
+    .product-info-main .price-box .price-wrapper .price {
+        font-size: 3rem;
+        color: @pg-accent-color;
+    }
+}

@@ -15,13 +15,18 @@
   input[type="search"],
   input[type="number"],
   input[type="datetime"],
-  input[type="email"] {
+  input[type="email"],
+  select {
     height: 42px;
     font-size: 1.8rem;
     border-color: @pg-grey30-color;
     color: @pg-dark-color;
     outline: none;
     .lib-input-placeholder(@pg-dark-color)
+  }
+
+  select:not([disabled]):focus {
+    box-shadow: none;
   }
 
   .btn-accent-to-dark,

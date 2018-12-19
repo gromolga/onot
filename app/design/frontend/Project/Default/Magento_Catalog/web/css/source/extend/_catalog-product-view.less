@@ -1,0 +1,80 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .catalog-product-view {
+        .column.main {
+            display: grid;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .catalog-product-view {
+        .column.main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 50px;
+        }
+
+        .product-info-main,
+        .product.media {
+            width: 100%;
+        }
+
+        .swatch-opt {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 35px;
+        }
+
+        .swatch-option {
+            float: right;
+            margin: 0 5px;
+        }
+
+        .swatch-attribute-options {
+            margin-top: 0;
+        }
+
+        .swatch-attribute:first-of-type {
+            grid-column: 1 / span 2;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .product-info-media {
+        order: 1;
+    }
+
+    .product-info-main {
+        order: 2;
+    }
+
+    .product.info.detailed {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+
+    .product-info-main .box-tocart .actions,
+    .product-options-bottom .box-tocart .actions {
+        display: block;
+    }
+
+    .catalog-product-view .box-tocart .action.tocart {
+        width: 100%;
+    }
+}
