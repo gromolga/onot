@@ -1,0 +1,34 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .product-label {
+        display: inline-block;
+        min-width: 100px;
+        padding: 10px;
+        box-sizing: border-box;
+        line-height: 1;
+        border-radius: 15px 0;
+        text-align: center;
+        border: none;
+        color: @pg-white-color;
+    }
+    .product-item-photo {
+        color: @pg-white-color;
+        text-decoration: none;
+        &:hover,
+        &:visited {
+            color: @pg-white-color;
+        }
+    }
+    .product-sale {
+        background-color: @pg-accent-color;
+    }
+    .product-new {
+        background-color: @pg-new-product-label;
+    }
+    .product-new-collection {
+        background-color: @pg-new-collection-label;
+    }
+}

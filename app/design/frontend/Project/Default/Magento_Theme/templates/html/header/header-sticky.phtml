@@ -4,9 +4,12 @@
  */
 ?>
 
-<div class="header-main"
+<div class="header-wrapper"
      data-action="header-sticky"
      data-mage-init='{"js/header-sticky": {}}'>
-    <?php echo $block->getChildHtml() ?>
+    <div class="header-main">
+        <?php echo $block->getChildHtml() ?>
+    </div>
+    <div class="header-sticky-placeholder"></div>
 </div>
-<div class="header-sticky-placeholder"></div>
+

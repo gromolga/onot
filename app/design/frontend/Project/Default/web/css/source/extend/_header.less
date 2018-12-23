@@ -3,7 +3,13 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
+    .header-wrapper {
+        background-color: @pg-white-color;
+        border-bottom: 1px solid @pg-border-light-bg;
+    }
+
     .header-main {
+        position: relative;
         display: grid;
         grid-gap: 0 5px;
     }
@@ -35,7 +41,6 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .header-main {
         padding: 0 0 10px;
-        border-bottom: 1px solid @pg-border-light-bg;
     }
 
     .page-header {
@@ -112,9 +117,8 @@
         order: 4;
         padding-left: 0;
         > * {
-            margin: 5px 15px 0 10px;
+            margin: 5px 5px 0 10px;
             min-width: 26px;
-
         }
     }
 

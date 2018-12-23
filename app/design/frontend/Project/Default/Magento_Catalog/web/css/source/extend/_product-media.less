@@ -1,7 +1,31 @@
-.fotorama__nav-wrap--vertical.fotorama__nav-wrap {
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .product.media {
+        direction: ltr;
+    }
+
+    .fotorama__nav-wrap--vertical.fotorama__nav-wrap {
         right: 0;
-        left: inherit;
-}
-.fotorama__stage {
-    left: 0 !important;
+        left: inherit !important;
+    }
+
+    .fotorama__stage {
+        left: 0 !important;
+    }
+
+    .fotorama__wrap {
+        .fotorama__caption__wrap {
+            display: none;
+        }
+    }
+
+    .fotorama-item {
+        .fotorama__arr,
+        .fotorama__arr:hover {
+            background: transparent;
+        }
+    }
 }

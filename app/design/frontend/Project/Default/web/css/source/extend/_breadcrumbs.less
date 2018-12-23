@@ -1,9 +1,16 @@
-.breadcrumbs {
-    .item:not(:last-child):after {
-        content: '/';
-        font-size: 1.2rem;
-        line-height: 1;
-        padding: 0 5px;
-        color: @pg-dark-color;
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .breadcrumbs {
+        margin: 15px auto 25px auto;
+        .item:not(:last-child):after {
+            content: '/';
+            font-size: 1.2rem;
+            line-height: 1;
+            padding: 0 5px;
+            color: @pg-dark-color;
+        }
     }
 }

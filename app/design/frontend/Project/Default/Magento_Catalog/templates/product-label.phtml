@@ -1,0 +1,19 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+?>
+
+<?php if(false): ?>
+    <div class="product-label product-sale">
+        <?php echo $block->escapeHtml(__('Sale')) ?>
+    </div>
+<?php elseif(false): ?>
+    <div class="product-label product-new">
+        <?php echo $block->escapeHtml(__('New on the shelf')) ?>
+    </div>
+<?php else: ?>
+    <div class="product-label product-new-collection">
+        <?php echo $block->escapeHtml(__('New collection')) ?>
+    </div>
+<?php endif; ?>

@@ -12,10 +12,24 @@
         <referenceBlock name="product.info.description" remove="true"/>
 
         <move element="product.info.addto" destination="product.info.options.wrapper.bottom"/>
-        <move element="page.main.title" destination="product.info.options.wrapper.bottom"/>
+        <move element="page.main.title" destination="product.info.main" after="product-logo"/>
+
+        <referenceBlock name="product.info.form.options">
+            <block name="size-chart"
+                   before="product.info.options.wrapper.bottom"
+                   template="Magento_Catalog::size-chart.phtml"/>
+        </referenceBlock>
 
         <referenceContainer name="product.info.main">
-            <block class="Magento\Cms\Block\Block" name="product-additional-info" before="product.info.overview">
+            <block class="Magento\Catalog\Block\Product\View\Description"
+                   name="product-logo"
+                   template="Magento_Catalog::product-logo.phtml"
+                   before="-"/>
+
+            <block name="product-club-members-points"
+                   template="Magento_Catalog::product-club-members-points.phtml"/>
+
+            <block class="Magento\Cms\Block\Block" name="product-additional-info">
                 <arguments>
                     <argument name="block_id" xsi:type="string">product-additional-info</argument>
                 </arguments>
@@ -46,7 +60,26 @@
                     <argument name="title" translate="true" xsi:type="string">Details</argument>
                 </arguments>
             </block>
-
         </referenceBlock>
+
+        <referenceBlock name="product.info.upsell">
+            <block name="product-label-upsell"
+                   as="product-label"
+                   template="Magento_Catalog::product-label.phtml"
+                   before="-"/>
+        </referenceBlock>
+
+        <referenceBlock name="catalog.product.related">
+            <block name="product-label-related"
+                   as="product-label"
+                   template="Magento_Catalog::product-label.phtml"
+                   before="-"/>
+        </referenceBlock>
+
+        <referenceContainer name="product.info.media">
+            <block name="product-label"
+                   template="Magento_Catalog::product-label.phtml"
+                   before="-"/>
+        </referenceContainer>
     </body>
 </page>
