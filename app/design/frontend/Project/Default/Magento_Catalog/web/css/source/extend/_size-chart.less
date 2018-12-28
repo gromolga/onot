@@ -1,0 +1,22 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .size-chart {
+        display: block;
+        margin: 25px 0;
+        color: @pg-grey10-color;
+        &:before {
+            content: '';
+            display: inline-block;
+            margin: 0 5px -2px 5px;
+            .sprite(@ruller-icon);
+        }
+        &:hover,
+        &:active,
+        &:visited {
+            color: @pg-grey10-color;
+        }
+    }
+}

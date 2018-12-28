@@ -1,0 +1,45 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .product-social-list {
+        display: flex;
+        justify-content: center;
+        margin: 31px 0;
+        padding: 20px 0;
+        font-size: 0;
+        line-height: 0;
+        border-top: 1px solid @pg-border-light-bg;
+    }
+
+    .product-social-item {
+        margin: 0 10px;
+    }
+
+    .product-social-link {
+        display: block;
+    }
+
+    .product-social-facebook {
+        .sprite(@facebook-dark-icon);
+    }
+
+    .product-social-instagram {
+        .sprite(@instagram-dark-icon);
+    }
+
+    .product-social-pinterest {
+        .sprite(@pinterest-icon);
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .product-social-list {
+        border-bottom: 1px solid @pg-border-light-bg;
+    }
+}

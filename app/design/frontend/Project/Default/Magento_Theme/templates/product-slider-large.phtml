@@ -1,0 +1,38 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+?>
+
+<script type="text/x-magento-init">
+    {
+        ".products-upsell>.product-items": {
+            "js/slider": {
+                "loop":true,
+                "itemElement":"product-item",
+                "nav":false,
+                "dots":false,
+                "responsive": {
+                    "0" : {
+                        "items":1
+                    },
+                    "450" : {
+                        "items":2
+                    },
+                    "576" : {
+                        "items":3
+                    },
+                    "768" : {
+                        "items":4
+                    },
+                    "992" : {
+                        "items":5
+                    },
+                    "1200" : {
+                        "items":6
+                    }
+                }
+            }
+        }
+    }
+</script>

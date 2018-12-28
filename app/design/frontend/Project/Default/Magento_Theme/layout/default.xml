@@ -2,6 +2,11 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/owl-carousel/owl.carousel.min.css"/>
+        <css src="css/owl-carousel/owl.theme.default.min.css"/>
+    </head>
+
     <body>
         <referenceBlock name="header" remove="true"/>
         <referenceBlock name="my-account-link" remove="true"/>
@@ -59,6 +64,8 @@
                 <container htmlTag="div" htmlClass="header-center-col" name="header-center-col"/>
                 <container htmlTag="div" htmlClass="header-left-col" name="header-left-col"/>
             </block>
+
+            <block name="product-slider-large" template="Magento_Theme::product-slider-large.phtml"/>
 
             <block name="footer-bottom-line" template="Magento_Theme::footer/bottom-line.phtml" after="-">
                 <block class="Magento\Cms\Block\Block" name="footer-payment-methods" as="payments">

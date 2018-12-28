@@ -1,0 +1,42 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .block.upsell,
+    .block.related {
+        .product-new-collection {
+            float: right;
+        }
+
+        .product-item-details {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            > * {
+                margin: 0;
+                width: ~"calc(50% - 5px)";
+            }
+
+            .price-box {
+                justify-content: flex-end;
+                color: @pg-accent-color;
+            }
+
+            .price-box .price {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    .page-layout-1column {
+        .products-grid {
+            .products {
+                .product-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

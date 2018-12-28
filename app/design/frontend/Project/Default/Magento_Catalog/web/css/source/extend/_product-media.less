@@ -29,3 +29,33 @@
         }
     }
 }
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .product.media {
+        .action.towishlist span {
+            display: inline-block;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .gallery-placeholder {
+            clear: both;
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product.media {
+        .action.towishlist span {
+            display: none;
+        }
+    }
+}

@@ -49,8 +49,8 @@
                 <height>100</height>
             </image>
             <image id="mini_cart_product_thumbnail" type="thumbnail">
-                <width>75</width>
-                <height>75</height>
+                <width>100</width>
+                <height>100</height>
             </image>
             <image id="new_products_content_widget_grid" type="small_image">
                 <width>240</width>
@@ -237,7 +237,7 @@
                 </var>
                 <var name="options">
                     <var name="options">
-                        <var name="nav">dots</var>
+                        <var name="nav">false</var>
                     </var>
                 </var>
             </var>

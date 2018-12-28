@@ -80,6 +80,15 @@
             <block name="product-label"
                    template="Magento_Catalog::product-label.phtml"
                    before="-"/>
+            <block class="Magento\Wishlist\Block\Catalog\Product\View\AddTo\Wishlist"
+                   name="view.addto.wishlist.top"
+                   template="Magento_Wishlist::catalog/product/view/addto/wishlist.phtml"
+                   after="product-label"/>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block name="product-social"
+                   template="Magento_Catalog::product-social.phtml"/>
         </referenceContainer>
     </body>
 </page>
