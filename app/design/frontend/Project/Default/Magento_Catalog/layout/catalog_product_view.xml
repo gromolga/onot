@@ -53,11 +53,13 @@
             <block name="product-club-members-points"
                    template="Magento_Catalog::product-club-members-points.phtml"/>
 
-            <block class="Magento\Cms\Block\Block" name="product-additional-info">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">product-additional-info</argument>
-                </arguments>
-            </block>
+            <container htmlTag="div" htmlClass="product-additional-info" name="product-additional-info-box">
+                <block class="Magento\Cms\Block\Block" name="product-additional-info">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">product-additional-info</argument>
+                    </arguments>
+                </block>
+            </container>
         </referenceContainer>
 
         <referenceBlock name="product.info.details">

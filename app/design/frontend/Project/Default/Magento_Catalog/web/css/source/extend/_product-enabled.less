@@ -1,0 +1,30 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    //
+    //  Class for adding enabled styles to configurable product
+    //  ---------------------------------------------
+
+    .product-enabled {
+        .fotorama__stage__frame,
+        .product-additional-info,
+        .box-tocart,
+        .product-logo,
+        .page-title-wrapper,
+        .price {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 10;
+                background-color: rgba(255, 255, 255, .5);
+            }
+        }
+    }
+}
