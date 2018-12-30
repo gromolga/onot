@@ -50,6 +50,9 @@
                    template="Magento_Catalog::product-logo.phtml"
                    before="-"/>
 
+            <block name="product-sale"
+                   template="Magento_Catalog::product-sale.phtml"/>
+
             <block name="product-club-members-points"
                    template="Magento_Catalog::product-club-members-points.phtml"/>
 
