@@ -17,7 +17,31 @@
         <referenceBlock name="product.info.form.options">
             <block name="size-chart"
                    before="product.info.options.wrapper.bottom"
-                   template="Magento_Catalog::size-chart.phtml"/>
+                   template="Magento_Catalog::size-chart.phtml">
+                <block class="Magento\Cms\Block\Block"
+                       name="size-chart-1">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">size-chart-1</argument>
+                        <argument name="title" translate="true" xsi:type="string">Lorem ipsum dolor sit amet, consectetur</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block"
+                       name="size-chart-2">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">size-chart-2</argument>
+                        <argument name="title" translate="true" xsi:type="string">Lorem ipsum dolor</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block"
+                       name="size-chart-3">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">size-chart-3</argument>
+                        <argument name="title" translate="true" xsi:type="string">Lorem ipsum dolor sit amet</argument>
+                    </arguments>
+                </block>
+            </block>
         </referenceBlock>
 
         <referenceContainer name="product.info.main">
@@ -80,6 +104,7 @@
             <block name="product-label"
                    template="Magento_Catalog::product-label.phtml"
                    before="-"/>
+
             <block class="Magento\Wishlist\Block\Catalog\Product\View\AddTo\Wishlist"
                    name="view.addto.wishlist.top"
                    template="Magento_Wishlist::catalog/product/view/addto/wishlist.phtml"

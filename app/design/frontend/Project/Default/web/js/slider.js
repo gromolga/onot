@@ -6,6 +6,5 @@ define([
         $(element)
             .addClass('owl-carousel owl-theme')
             .owlCarousel(config);
-        console.log(config);
     }
 });

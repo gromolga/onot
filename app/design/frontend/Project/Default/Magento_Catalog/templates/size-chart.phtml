@@ -4,6 +4,45 @@
  */
 ?>
 
-<a href="#" class="size-chart">
-    <?php echo $block->escapeHtml(__('Size chart')) ?>
-</a>
+<?php
+/** @var \Magento\Framework\View\Element\Template[] $childBlocks */
+$childBlocks = $block->getLayout()->getChildBlocks($block->getNameInLayout());
+?>
+
+<?php if (!empty($childBlocks)) : ?>
+    <div id="size-chart"
+         style="display: none;"
+         data-mage-init='{"Magento_Ui/js/modal/modal": {
+            "buttons": [],
+            "innerScroll": true,
+            "modalClass": "size-chart-popup",
+            "title": "<?php echo $block->escapeHtml(__('Size chart')) ?>"
+         }}'>
+
+        <div data-mage-init='{"mage/accordion": {}}'>
+            <?php foreach ($childBlocks as $childBlock) : ?>
+                <?php
+                $title = $childBlock->getTitle();
+                $html = $childBlock->toHtml();
+                ?>
+                <?php if ($title && $html) : ?>
+                    <div data-role="collapsible">
+                        <div data-role="trigger">
+                            <span>
+                                <?php echo $title ?>
+                            </span>
+                        </div>
+                    </div>
+                    <div data-role="content">
+                        <?php echo $html ?>
+                    </div>
+                <?php endif ?>
+            <?php endforeach ?>
+        </div>
+    </div>
+
+    <a href="#size-chart" class="size-chart" data-mage-init='{"js/modal-open": {}}'>
+        <?php echo $block->escapeHtml(__('Size chart')) ?>
+    </a>
+<?php endif ?>
+
