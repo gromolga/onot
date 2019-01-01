@@ -1,0 +1,38 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .category-view {
+        height: auto !important;
+    }
+    .category-image {
+        .image {
+            width: 100%;
+        }
+    }
+    .product-item-details {
+        color: @pg-accent-color;
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-layout-2columns-left .column.main {
+        float: left;
+    }
+    .page-layout-2columns-left .sidebar-main {
+        float: right;
+    }
+}
