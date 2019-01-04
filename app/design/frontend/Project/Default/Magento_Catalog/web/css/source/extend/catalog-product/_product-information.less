@@ -50,12 +50,14 @@
                     @_button-border: 1px solid @pg-accent-color,
                     @_button-border-hover: 1px solid @pg-dark-color
                 );
+
                 &:before {
                     content: '';
                     display: inline-block;
                     vertical-align: middle;
                     .sprite(@cart-light-icon);
                 }
+
                 &:focus {
                     background-color: @pg-accent-color;
                     border-color: @pg-accent-color;
@@ -94,6 +96,7 @@
         &:focus {
             box-shadow: none;
         }
+
         .swatch-option {
             height: 25px;
             min-width: 25px;
@@ -239,6 +242,7 @@
             }
         }
     }
+
     .product .product.data.items > .item.title.active > .switch,
     .product.data.items > .item.content {
         border: none;

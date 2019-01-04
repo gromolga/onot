@@ -13,6 +13,7 @@
             margin: 0 5px -2px 5px;
             .sprite(@ruller-icon);
         }
+
         &:hover,
         &:active,
         &:visited {
@@ -24,6 +25,7 @@
         .modal-content {
             padding: 0;
         }
+
         .modal-title {
             position: relative;
             margin-bottom: 30px;
@@ -39,18 +41,22 @@
                 background-color: @pg-grey30-color;
             }
         }
+
         .modal-inner-wrap {
             margin: 0;
             width: 100%;
             max-width: 400px;
             padding: 50px 30px;
         }
+
         .action.close {
             padding: 0;
         }
+
         [role="trigger"] {
             font-weight: bold;
         }
+
         [data-role="trigger"] {
             position: relative;
             padding: 10px 0 10px 15px;
@@ -69,9 +75,11 @@
                 border-bottom: 1px solid @pg-grey10-color;
             }
         }
+
         [data-role="content"] {
             padding: 10px 0;
         }
+
         [aria-expanded="true"] {
             [data-role="trigger"]:before {
                 transform: translate(3px, -50%) rotate(-45deg);

@@ -4,7 +4,6 @@
 
 & when (@media-common = true) {
     .breadcrumbs {
-        margin: 15px auto 25px auto;
         .item:not(:last-child):after {
             content: '/';
             font-size: 1.2rem;
@@ -12,5 +11,29 @@
             padding: 0 5px;
             color: @pg-dark-color;
         }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .breadcrumbs {
+        margin: 15px 0 25px 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .breadcrumbs {
+        margin: 15px 0 25px 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

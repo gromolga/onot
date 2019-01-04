@@ -2,7 +2,17 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceBlock name="div.sidebar.additional" remove="true"/>
+
         <move element="category.view.container" destination="page.wrapper" after="header-nav"/>
         <move element="breadcrumbs" destination="main.content" before="-"/>
+
+        <referenceContainer name="main.content">
+            <block name="show-more-btn" template="Magento_Catalog::show-more-btn.phtml" after="category.products"/>
+        </referenceContainer>
+
+        <referenceContainer name="div.sidebar.main">
+            <block name="fake-title" template="Magento_Catalog::fake-title.phtml" before="-"/>
+        </referenceContainer>
     </body>
 </page>
