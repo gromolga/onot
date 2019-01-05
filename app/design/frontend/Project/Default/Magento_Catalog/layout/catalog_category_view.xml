@@ -5,7 +5,6 @@
         <referenceBlock name="div.sidebar.additional" remove="true"/>
 
         <move element="category.view.container" destination="page.wrapper" after="header-nav"/>
-        <move element="breadcrumbs" destination="main.content" before="-"/>
 
         <referenceContainer name="main.content">
             <block name="show-more-btn" template="Magento_Catalog::show-more-btn.phtml" after="category.products"/>

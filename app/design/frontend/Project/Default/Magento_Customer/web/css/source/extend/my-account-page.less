@@ -1,0 +1,64 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .account {
+    a {
+      color: @pg-dark-color;
+      &:hover {
+        color: @pg-accent-color;
+      }
+    }
+
+    .block-title > * {
+      display: block;
+    }
+
+    .column.main .block:not(.widget) .box-title > span {
+      font-size: 1.6rem;
+    }
+
+    .change-password,
+    .edit {
+      font-weight: bold;
+    }
+
+    .page-title-wrapper .page-title {
+      margin-right: 0;
+    }
+
+    .btn-accent-to-dark {
+      color: @pg-white-color;
+      &:hover {
+        color: @pg-white-color;
+      }
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .account {
+    .page.messages {
+      margin-bottom: 0;
+    }
+
+    .block-dashboard-info {
+      float: left;
+      width: 40%;
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+  .account {
+    .block-dashboard-info {
+      float: none;
+      width: 100%;
+    }
+  }
+}

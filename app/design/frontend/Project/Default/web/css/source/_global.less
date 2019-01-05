@@ -164,6 +164,27 @@
       border: 1px solid @pg-grey30-color;
     }
   }
+
+  .block-compare .block-title > strong {
+    font-weight: bold;
+  }
+
+  .block-wishlist .block-title > strong {
+    font-weight: bold;
+  }
+
+  .page-title {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      width: 30px;
+      background-color: @pg-grey30-color;
+    }
+  }
 }
 
 //
@@ -249,5 +270,10 @@
     input[type="checkbox"]:checked + label:before {
       .sprite(@check-dark-icon);
     }
+  }
+
+  h1,
+  .h1 {
+    margin-top: 20px;
   }
 }

@@ -20,6 +20,7 @@
         <move element="header-toggle-nav" destination="header-right-col"/>
         <move element="header-map" destination="header-right-col"/>
         <move element="header-handicapped" destination="header-right-col"/>
+        <move element="breadcrumbs" destination="main.content" before="-"/>
         <move element="navigation.sections" destination="header-nav"/>
         <move element="header.container" destination="header-nav"/>
         <move element="form.subscribe" destination="pj-footer-cards" before="footer-brand"/>
