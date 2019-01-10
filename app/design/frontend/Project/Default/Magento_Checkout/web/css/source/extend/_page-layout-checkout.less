@@ -1,0 +1,283 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .checkout-index-index {
+    .opc {
+      margin: auto;
+    }
+
+    .opc-wrapper {
+      width: 100%;
+      padding: 0 15px;
+      box-sizing: border-box;
+      .step-title{
+        padding: 0;
+        border-bottom: none;
+      }
+
+      .form-shipping-address {
+        max-width: none;
+      }
+
+      .form-login {
+        margin: 0;
+      }
+    }
+
+    .opc-sidebar {
+      display: none;
+    }
+
+    .form-shipping-address {
+      .field {
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    .fieldset > .field {
+      margin: 0;
+      > label {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0;
+      }
+    }
+
+    .fieldset {
+      display: grid;
+      grid-row-gap: 20px;
+      .label {
+        position: absolute;
+      }
+
+      .note {
+        position: absolute;
+        left: 0;
+      }
+
+      .field {
+        .additional {
+          margin: 0;
+        }
+
+        &:not(.choice) {
+          > .control {
+            width: 100%;
+          }
+
+          > .label {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: auto;
+            padding: 0 0 0 15px;
+          }
+        }
+      }
+    }
+
+    .field .control._with-tooltip input {
+      margin-right: 0;
+    }
+
+    .field {
+      position: relative;
+    }
+
+    [name="shippingAddress.street.0"],
+    [name="shippingAddress.street.2"] {
+      display: none;
+    }
+
+    .field-error {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .field-error, div.mage-error[generated] {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-top: 0;
+    }
+
+    [aria-expanded="true"]:before {
+      transform: none;
+    }
+
+    .estimated-block + .minicart-wrapper {
+      display: none;
+    }
+
+    .authentication-wrapper {
+      display: none;
+    }
+
+    button.primary {
+      padding: 12px 15px;
+      font-size: 1.8rem;
+      background-color: @pg-accent-color;
+      border-color: @pg-accent-color;
+      &:hover {
+        background-color: @pg-dark-color;
+        border-color: @pg-dark-color;
+      }
+    }
+
+    .opc-wrapper .fieldset > .field.required > label:after,
+    .opc-wrapper .fieldset > .field._required > label:after {
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .checkout-index-index {
+    .opc-wrapper {
+      .form-login {
+        border-bottom: none;
+      }
+    }
+
+    .opc-estimated-wrapper {
+      display: none;
+    }
+
+    .field {
+      .control._with-tooltip {
+        input {
+          float: right;
+          width: ~"calc(100% - 30px)";
+        }
+      }
+    }
+
+    .field-tooltip {
+      position: static;
+      transform: none;
+      float: left;
+      .field-tooltip-action {
+        position: static;
+        transform: none;
+        margin: 7px 0;
+      }
+    }
+
+    .fieldset {
+      div.mage-error[generated] {
+        bottom: -56px;
+      }
+
+      .note {
+        bottom: -70px;
+      }
+
+      .field {
+        .label.label[for=customer-email],
+        .label.label[for=XNNY08T] {
+          top: 13px;
+          left: 25px;
+          transform: none;
+        }
+      }
+
+      [name="shippingAddress.telephone"] {
+        .label.label.label {
+          left: 25px;
+        }
+        .field-error {
+          transform: none;
+          top: 13px;
+        }
+      }
+    }
+
+    .page-main {
+      padding: 0;
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+  .checkout-index-index {
+    .fieldset {
+      div.mage-error[generated] {
+        left: -15px;
+        right: -15px;
+      }
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .checkout-container {
+    margin-top: 20px;
+    border: 1px solid @pg-grey40-color;
+  }
+
+  .checkout-index-index {
+    .opc {
+      max-width: 900px;
+    }
+
+    .fieldset {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 25px;
+
+      .note {
+        bottom: -30px;
+      }
+
+      .field {
+        &:not(.choice) {
+          .label[for=customer-email] {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+    .opc-wrapper {
+      .form-login {
+        max-width: none;
+        width: ~"calc(50% - 13px)";
+        padding-bottom: 15px;
+      }
+    }
+
+    .field-tooltip {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      .field-tooltip-action {
+        position: absolute;
+        left: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .field .control._with-tooltip input {
+      width: 100%;
+    }
+  }
+}

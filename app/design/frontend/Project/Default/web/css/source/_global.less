@@ -172,19 +172,6 @@
   .block-wishlist .block-title > strong {
     font-weight: bold;
   }
-
-  .page-title {
-    position: relative;
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      height: 1px;
-      width: 30px;
-      background-color: @pg-grey30-color;
-    }
-  }
 }
 
 //
@@ -225,6 +212,16 @@
   .custom-checkbox {
     input[type="checkbox"]:checked + label:before {
       .sprite(@check-large-icon);
+    }
+  }
+
+  .page-title-wrapper {
+    .page-title {
+      margin: 10px auto;
+      font-size: 2rem;
+      &:after {
+        display: none;
+      }
     }
   }
 }

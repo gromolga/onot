@@ -1,0 +1,88 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .opc-progress-bar {
+    display: flex;
+    .opc-progress-bar-item {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      border-bottom: 1px solid @pg-grey40-color;
+      &:before {
+        display: none;
+      }
+
+      span {
+        display: block;
+        position: relative;
+        &:after {
+          display: none;
+        }
+
+        &:before {
+          margin: 0 10px;
+          line-height: 25px;
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+          content: counter(i);
+          counter-increment: i;
+          font-family: @pg-additional-font-name;
+          font-size: 1.6rem;
+          font-weight: bold;
+          background-color: @pg-grey30-color;
+          color: #fff;
+        }
+      }
+    }
+
+    .opc-progress-bar-item._active {
+      border-bottom: 3px solid @pg-accent-color;
+      > span {
+        &:before {
+          background-color: @pg-accent-color;
+        }
+      }
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .opc-progress-bar {
+    .opc-progress-bar-item {
+      span {
+        padding: 10px 35px 10px 0;
+        &:before {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .opc-progress-bar {
+    .opc-progress-bar-item {
+      span {
+        padding: 10px 10px 10px 0;
+        &:before {
+          position: static;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
