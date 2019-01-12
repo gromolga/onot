@@ -1,0 +1,40 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+  .customer-account-login {
+    .primary {
+      display: block;
+    }
+
+    .login-container {
+      .block.block-customer-login.block-customer-login,
+      .block.block-new-customer.block-new-customer {
+          float: none;
+          margin: auto;
+      }
+    }
+
+    .actions-toolbar {
+      .primary {
+        width: 100%;
+        a.action {
+          width: 100%;
+        }
+      }
+    }
+
+    .secondary {
+      .action {
+        span {
+          color: @pg-dark-color;
+        }
+      }
+    }
+
+    .form {
+      margin-bottom: 30px;
+    }
+  }
+}
